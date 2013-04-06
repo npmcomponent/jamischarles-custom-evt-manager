@@ -7,7 +7,7 @@
  * - we can still pass in *this* as part of the dom obj... That'll work really well...
  * 
  * - write solid test cases around this 
-
+ * - add ability to conosle.log everything with window.debug? or some way of turning debug on...
  */
 
 /**
@@ -21,21 +21,27 @@
  */
 var Mediator = require("Mediator");
 
+var DEFAULT_MEDIATOR_NS = "FS";
+var DEFAULT_MEDIATOR_NAME = "customEvtMgr";
 
 //@param namespace - String (what global variable should contain the custom-event-mediator)
-module.exports = function(namespace){
+module.exports = function(mediator_namespace, mediator_name){
+  var ns = mediator_namespace || DEFAULT_MEDIATOR_NS;
+  var mediator_name = mediator_name || DEFAULT_MEDIATOR_NAME;
+
+  //create global namespace, if it doesn't exist already.
+  //FIXME: there's a better way to do this...
+  if (typeof window[ns] === "undefined") {
+    window[ns] = {};
+  }
   
-  //create namespace, if it doesn't exist already
 
-  window.FS = window.FS || {};
+  //if it's not a mediator yet, make it one
+  if (typeof window[ns][mediator_name] === "undefined") {
+    window[ns][mediator_name] = new Mediator();
+  }
 
-  window.FS.customEvtMgr = window.FS.customEvtMgr || new Mediator();
-
-  //create mediator and attach it to the namespace
-  // window.FS = {
-  //   customEvtMgr: new Mediator()
-  // };
 
   //Q: Should we keep a global log of what custom events are avialable?
-  return window.FS.customEvtMgr;
+  return window[ns][mediator_name];
 }

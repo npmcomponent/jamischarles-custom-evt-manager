@@ -6,7 +6,7 @@
   "keywords": [],
   "dependencies": {
     "gorillatron/mediator": "*"
-    },
+  },
   "development": {},
   "license": "MIT",
   "scripts": [
