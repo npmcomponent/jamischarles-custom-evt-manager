@@ -14,7 +14,8 @@
     }
 
 
-    var mediator = require("custom-evt-manager")();
+    //test overriding the default namespace
+    var mediator = require("custom-evt-manager")("JS", "someProp");
 
     mediator.publish( "chat::message", "shaggy87", "lol dope" );
 
@@ -26,7 +27,7 @@
 
 
   //2nd mediator should be tied to the same mediator unless a different namespace is provided
-  var mediator2 = require("custom-evt-manager")();
+  var mediator2 = require("custom-evt-manager")("JS", "someProp");
 
   mediator2.publish( "chat::message", "2nd one", "lol dope" );
 
