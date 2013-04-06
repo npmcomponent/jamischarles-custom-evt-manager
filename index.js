@@ -25,12 +25,16 @@ var Mediator = require("Mediator");
 //@param namespace - String (what global variable should contain the custom-event-mediator)
 module.exports = function(namespace){
   
-  //create namespace
+  //create namespace, if it doesn't exist already
+
+  window.FS = window.FS || {};
+
+  window.FS.customEvtMgr = window.FS.customEvtMgr || new Mediator();
 
   //create mediator and attach it to the namespace
-  window.FS = {
-    customEvtMgr: new Mediator()
-  };
+  // window.FS = {
+  //   customEvtMgr: new Mediator()
+  // };
 
   //Q: Should we keep a global log of what custom events are avialable?
   return window.FS.customEvtMgr;
