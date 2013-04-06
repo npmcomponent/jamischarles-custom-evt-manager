@@ -24,8 +24,8 @@ mediator.subscribe( "chat::message", displayMessage );
 mediator.publish( "chat::message", "shaggy87", "lol dope" );
 
 //SCOPE instances by adding a unique ID to the namespace
-mediator.publish( "dropdown::sign-in-dd:open", "dropdown::sign-in-dd:open has fired", "lol dope" );
-mediator.subscribe( "dropdown::sign-in-dd:open", callback );
+mediator.publish( "dropdown::sign-in-dd::open", "dropdown::sign-in-dd:open has fired", "lol dope" );
+mediator.subscribe( "dropdown::sign-in-dd::open", callback );
 
 ```
 
