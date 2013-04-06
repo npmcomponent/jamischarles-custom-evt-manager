@@ -1,0 +1,27 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Doc</title>
+</head>
+<body>
+  
+  <div id="test_el">test</div>
+
+  <script src="build/build.js"></script>
+  <script>
+    var mediator = require("custom-evt-manager")();
+
+    mediator.publish( "chat::message", "shaggy87", "lol dope" );
+
+    mediator.subscribe( "chat::message", function(msg1, msg2){
+      console.log(msg1 + " | " + msg2)
+    }, document.getElementById("test_el") );
+
+    console.log(mediator);
+
+    mediator.publish( "chat::message", "shaggy87", "lol dope" );
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "custom-evt-manager",
+  "repo": "jamischarles/custom-evt-manager",
+  "description": "Sets up a global mediator which pub-subs custom events across components.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "gorillatron/mediator": "*"
+    },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
