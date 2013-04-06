@@ -23,6 +23,10 @@ mediator.subscribe( "chat::message", displayMessage );
 // 'chat' and 'chat::message' will fire because of namespacing
 mediator.publish( "chat::message", "shaggy87", "lol dope" );
 
+//SCOPE instances by adding a unique ID to the namespace
+mediator.publish( "dropdown::sign-in-dd:open", "dropdown::sign-in-dd:open has fired", "lol dope" );
+mediator.subscribe( "dropdown::sign-in-dd:open", callback );
+
 ```
 
 ### Api
