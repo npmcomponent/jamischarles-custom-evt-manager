@@ -14,7 +14,7 @@
 var Mediator = require('custom-evt-manager');
 
 //var mediator = new Mediator("JED" "custpmEvtMgr"); //Add to JED.customEvtMgr instead of default.
-//ensures a single global mediator obj at default location (FS.customEvtMgr)
+//ensures a single global mediator obj at default location (FS.evtMediator)
 var mediator = new Mediator();
 
 mediator.subscribe( "chat", logChatEvent );

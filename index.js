@@ -22,7 +22,7 @@
 var Mediator = require("Mediator");
 
 var DEFAULT_MEDIATOR_NS = "FS";
-var DEFAULT_MEDIATOR_NAME = "customEvtMgr";
+var DEFAULT_MEDIATOR_NAME = "evtMediator";
 
 //@param namespace - String (what global variable should contain the custom-event-mediator)
 module.exports = function(mediator_namespace, mediator_name){
