@@ -1,4 +1,3 @@
-
 /**
  * TODO:
  * - add scoping mechanism... Q: How does jquery do it? Can we add a custom channel for each el?
@@ -44,4 +43,5 @@ module.exports = function(mediator_namespace, mediator_name){
 
   //Q: Should we keep a global log of what custom events are avialable?
   return window[ns][mediator_name];
-}
+};
+ 
