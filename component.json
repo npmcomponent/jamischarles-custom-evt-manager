@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "gorillatron/envoi": "*"
+    "avetisk/gorillatron-mediator": "*"
   },
   "development": {},
   "license": "MIT",
