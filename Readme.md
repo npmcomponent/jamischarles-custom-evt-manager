@@ -1,3 +1,4 @@
+*This repository is a mirror of the [component](http://component.io) module [jamischarles/custom-evt-manager](http://github.com/jamischarles/custom-evt-manager). It has been modified to work with NPM+Browserify. You can install it using the command `npm install npmcomponent/jamischarles-custom-evt-manager`. Please do not open issues or send pull requests against this repo. If you have issues with this repo, report it to [npmcomponent](https://github.com/airportyh/npmcomponent).*
 # custom-evt-manager
 
   Sets up a global mediator which pub-subs custom events across components.

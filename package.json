@@ -1,0 +1,10 @@
+{
+  "name": "jamischarles-custom-evt-manager",
+  "description": "Sets up a global mediator which pub-subs custom events across components.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "avetisk-gorillatron-mediator": "git://github.com/npmcomponent/avetisk-gorillatron-mediator.git"
+  },
+  "license": "MIT"
+}

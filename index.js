@@ -18,7 +18,7 @@
 /**
  *  Pull in DEPS
  */
-var Mediator = require("Mediator");
+// commented out by npm-component: var Mediator = require("Mediator");
 
 var DEFAULT_MEDIATOR_NS = "FS";
 var DEFAULT_MEDIATOR_NAME = "evtMediator";
